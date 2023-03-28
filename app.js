@@ -10,5 +10,7 @@ inputField.addEventListener('keyup', e => {
 });
 
 function requestApi(city) {
-    let api = ``;
+    let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b34f67a5a92dd5e00d4c0c1a36452a4&lang=pt_br`;
+    fetch(api)
+    .then(response => console.log(response.json()));
 }
