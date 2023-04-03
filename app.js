@@ -4,6 +4,7 @@ const infoTxt = document.querySelector('.info-txt');
 const inputField = document.querySelector('input');
 const locationBtn = document.querySelector('button');
 const wIcon = document.querySelector('.weather-part img');
+const arrowBack = document.querySelector('header i');
 
 let api;
 
@@ -77,6 +78,9 @@ function weatherDetails(info) {
 
         infoTxt.classList.remove('pending', 'error');
         wrapper.classList.add('active');
-        console.log(info);
     }
 }
+
+arrowBack.addEventListener('click', () => {
+    wrapper.classList.remove('active');
+});
